@@ -10,9 +10,8 @@
   "types": "./dist/types/index.d.ts",
   "qwik-lib-starter": "./dist/index.mjs",
   "scripts": {
-    "dev": "node --inspect node_modules/vite/bin/vite.js --config example/vite.config.ts --mode ssr",
-    "dev.debug": "node --inspect-brk node_modules/vite/bin/vite.js --config example/vite.config.ts --force --mode ssr",
-    "build.example": "vite build --config example/vite.config.ts --ssr src/entry.ssr.tsx",
+    "dev": "node --inspect node_modules/vite/bin/vite.js --config vite.example.ts --mode ssr",
+    "build.example": "vite build --config vite.example.ts --ssr src/entry.ssr.tsx",
     "build": "pnpm build.lib && pnpm build.types",
     "build.lib": "vite build --mode lib",
     "build.types": "tsc --emitDeclarationOnly",
