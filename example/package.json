@@ -1,0 +1,10 @@
+{
+  "name": "example",
+  "version": "0.0.1",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@builder.io/qwik": "0.0.107",
+    "qwik-lib-starter": "latest"
+  }
+}

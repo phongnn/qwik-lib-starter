@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "qwik-lib-starter": ["../dist/types"]
+    }
+  },
+  "include": ["src"]
+}
