@@ -1,8 +1,11 @@
 {
   "name": "qwik-lib-starter",
-  "version": "0.0.1",
+  "version": "0.0.0-semantic-release",
   "description": "A template for creating a new library for Qwik framework.",
-  "homepage": "https://github.com/phongnn/qwik-lib-starter",
+  "homepage": "https://phongnn.github.io/qwik-lib-starter",
+  "repository": {
+    "url": "https://github.com/phongnn/qwik-lib-starter.git"
+  },
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -22,7 +25,8 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "release": "np",
-    "prepare": "husky install"
+    "prepare": "npx husky install",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@builder.io/qwik": "^0.0.107",
