@@ -63,10 +63,6 @@
       "@commitlint/config-conventional"
     ]
   },
-  "husky": {
-    "pre-commit": "npx lint-staged",
-    "commit-msg": "npx --no -- commitlint --edit ${1}"
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "pnpm fmt",
