@@ -13,7 +13,11 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: ["./tsconfig.json", "./example/tsconfig.json"],
+    project: [
+      "./tsconfig.json",
+      "./example/tsconfig.json",
+      "./cypress/tsconfig.json",
+    ],
     ecmaVersion: 2021,
     sourceType: "module",
     ecmaFeatures: {

@@ -30,3 +30,4 @@ tsconfig.tsbuildinfo
 vite.config.ts
 vite.example.ts
 .eslintrc.cjs
+cypress.config.ts

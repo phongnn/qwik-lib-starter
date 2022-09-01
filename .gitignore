@@ -7,6 +7,9 @@ functions/**/*.js
 
 # Development
 node_modules
+/cypress/screenshots
+/cypress/videos
+/cypress/downloads
 
 # Cache
 .cache
