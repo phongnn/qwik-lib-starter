@@ -1,4 +1,4 @@
-import { add, subtract, multiply } from ".";
+import { add, subtract, multiply, divide } from ".";
 
 describe("add", () => {
   it("should work", () => {
@@ -15,5 +15,11 @@ describe("subtract", () => {
 describe("multiply", () => {
   it("should work", () => {
     expect(multiply(3, 2)).toBe(6);
+  });
+});
+
+describe("divide", () => {
+  it("should work", () => {
+    expect(divide(6, 2)).toBe(3);
   });
 });
