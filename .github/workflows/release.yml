@@ -2,11 +2,11 @@ name: CI
 
 on:
   push:
-    branches: [main, release]
+    branches: [release]
 
 jobs:
   test:
-    if: "!contains(github.event.head_commit.message, 'ci skip')"
+    if: "!contains(github.event.head_commit.message, 'skip-ci')"
 
     runs-on: ubuntu-latest
 
@@ -15,7 +15,7 @@ jobs:
 
       - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 16.16
 
       - name: Cache ~/.pnpm-store
         uses: actions/cache@v2
@@ -34,18 +34,18 @@ jobs:
       - name: Install deps
         run: pnpm i
 
-      - name: Build and Test
+      - name: e2e testing
         run: pnpm e2e
 
   release:
     runs-on: ubuntu-latest
     needs: ["test"]
-    if: "!contains(github.event.head_commit.message, 'skip-release') && !contains(github.event.head_commit.message, 'skip-ci') && github.event_name != 'pull_request'"
+    if: "!contains(github.event.head_commit.message, 'skip-ci') && !contains(github.event.head_commit.message, 'skip-release')"
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 16.x
+          node-version: 16.16
       - name: Cache ~/.pnpm-store
         uses: actions/cache@v2
         env:
