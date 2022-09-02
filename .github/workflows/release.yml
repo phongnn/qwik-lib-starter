@@ -34,7 +34,10 @@ jobs:
       - name: Install deps
         run: pnpm i
 
-      - name: e2e testing
+      - name: Unit tests
+        run: pnpm test
+
+      - name: e2e tests
         run: pnpm e2e
 
   release:

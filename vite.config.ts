@@ -10,5 +10,13 @@ export default defineConfig(() => {
         fileName: (format) => `index.${format === "es" ? "mjs" : "cjs"}`,
       },
     },
+    test: {
+      globals: true,
+      // environment: 'jsdom',
+      // setupFiles: ['<PATH_TO_SETUP_FILE>'],
+      coverage: {
+        reporter: "text", // ["text", "json", "html"]
+      },
+    },
   };
 });

@@ -10,6 +10,7 @@ node_modules
 /cypress/screenshots
 /cypress/videos
 /cypress/downloads
+coverage
 
 # Cache
 .cache
